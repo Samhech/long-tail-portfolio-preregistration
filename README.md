@@ -63,7 +63,39 @@ Private repository snapshot: commit `fa42baa550ee5e69fae624fa2ae14cbdee2051d9`.
 
 ## Dated forecasts (added on the launch day, before any outcome is known)
 
-- H17/H18: share of fresh money going to niche funds in Q4 2026 (`resultats/h1718_prediction_4T2026.csv`). Fingerprint added on the launch day.
+- H17/H18: share of fresh money going to niche funds in Q4 2026 (`resultats/h1718_prediction_4T2026.csv`), computed by the single launch of 16 October 2026.  
+  SHA-256: `55f5049d925e3a049f7b9145f238c7b2ba1e1d1e017d9408bd752eb413986c69`
 - Step 16: Q4 2026 redemption requests of 7 funds (`resultats/etape16_previsions_4T2026.csv`). Fingerprint added by 15 November 2026.
 - The forecasts are scored in 2027, once the Q4 2026 filings are public; the files are published with the score.
-(https://github.com/Samhech/long-tail-portfolio-preregistration/edit/main/README.md)](https://github.com/Samhech/long-tail-portfolio-preregistration/edit/main/README.md)](https://github.com/Samhech/long-tail-portfolio-preregistration/edit/main/README.md)
+
+## H19-H21 (long tail of US ETFs, pre-registered 16 October 2026)
+
+| File | Content | SHA-256 |
+|---|---|---|
+| `rapport/preenregistrement_h19_h21.md` | Pre-registration of H19, H20, H20-BlackRock, H21, H21-2026 | `014f816836bdd593860b29ee28dff570979899c389ba2ba9a82e34e8afadb6f6` |
+| `data/etape19_21_releves/GEL_manifeste.csv` | Freeze manifest of all collected SEC data and scripts (1,544 files), 17 October 2026 | `98ccceb7670cebdab3e8cb69ec2858130075318a4a96802e6c4c70adc6bef14c` |
+| `data/etape19_21_releves/fidelity_service_fee_list_20260914.txt` | Fidelity list used to date the H21-2026 forecast (event of 16 November 2026) | `95628acef50d98d8516571f7e6de3bcbc6ea6ebdcdf61ff799d099ebddc480b5` |
+
+### H19-H21 code and structures (deposited after the dry run, before the single launch)
+
+| File | Content | SHA-256 |
+|---|---|---|
+| `data/etape19_21_releves/GEL_manifeste.csv` | Freeze manifest (1,544 files) | `98ccceb7670cebdab3e8cb69ec2858130075318a4a96802e6c4c70adc6bef14c` |
+| `rapport/preenregistrement_h19_h21.md` | Pre-registration text | `014f816836bdd593860b29ee28dff570979899c389ba2ba9a82e34e8afadb6f6` |
+| `rapport/protocole_validation.md` | Full protocol | `50f4a5ec7af9f1926555047fde59268d213a82dd896943791fc8632793512f93` |
+| `resultats/h1921_structures.csv` | Which funds enter each test (counts only, no values) | `25ffb9b11aa259914c317f7685307f90bb80729b15a7b329c9c9f8925e49f75e` |
+| `R/longue_traine_h1921.R` | H19-H21 tests | `d29a3dffd5d673c48fab05c973fd65db2bc7a256e90c61b2e7df07aabda1be2f` |
+| `scripts/19_21_blackrock_main.R` | H20-BlackRock hand reading (only if the script cannot read the table) | `0876379807d85032b272d2c6df9e13ca374d1f58145b5aa26d922fc491b14bb1` |
+| `scripts/19_21_blanc.R` | Dry run on a fictitious panel | `c59cf33e1e804b865a76402f4f6259cd068043619cc1f79cb2949159dd357b59` |
+| `scripts/19_21_lancement.R` | Single launch | `cd9274c1ee807e355a2dd39ce99cffb60601ae089ac5ab72c9b6edb20fd8fd79` |
+| `scripts/19_21_preparation.R` | Structures | `532071acbf934fbebaa23286be8ed8ff3eced70137f0620456c1bf4b0a547748` |
+| `R/credit_prive.R` | Step 16 code | `7ebf03944c6d667226470df73968d1848ac6ad3682b8c3de159ce75721239ed8` |
+| `R/logistique.R` | Step 16 code | `6c2b3dcbacca9b1fb63828b788f02df0c0109258272685e98ccbd5fa8b9525fe` |
+| `R/validation.R` | Step 16 code | `f0fc435a1f0ebd2ffbcd664c7bfa754f3e3a136bba3860042be8ba37be5c7dfd` |
+| `scripts/16_entrepot_credit_prive.R` | Step 16 launch | `44ff004a5615bbce5620a15ff6332f8b539b8f1f6a9df6ccc75e1262caa8cea4` |
+| `scripts/16b_previsions_4T2026.R` | Step 16 dated forecasts | `c3e3a038566ac4f7e28d50c29ecb67e3da6b607eb0dfd60d2e6b443c95ff5b46` |
+| `tests/test_h1921.R` | Unit tests (143 blocks) | `c93ea71259a8b2591e090511d6b4593f4dc393a3c8088480be8c37b7b9b59df1` |
+| `rapport/specification_h19_h21.md` | Code specification, with the dated decisions of 17 October 2026 (sections 11.7-11.8) | `686282aa248d6e27e8962548f6b5f9037eccf6689f48254a4ba44ab96fc3e167` |
+| `resultats/h1921_empreintes_4bis.csv` | List of the fingerprints above | `8cbe8e7a61ce7bfdb44e5411e1940cbc77e16be21ac78ae28e45e85b320befca` |
+
+Two rules were changed on 17 October 2026, before the launch and without seeing any value: the threshold of H20 version (a) was lowered from 100 to 40 niche series after the structures counted 48 (in favour of the thesis; written on every H20 verdict), and a single hand reading of the BlackRock table is allowed if the script cannot read it. Both are recorded in the trial journal.
