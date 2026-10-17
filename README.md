@@ -66,3 +66,4 @@ Private repository snapshot: commit `fa42baa550ee5e69fae624fa2ae14cbdee2051d9`.
 - H17/H18: share of fresh money going to niche funds in Q4 2026 (`resultats/h1718_prediction_4T2026.csv`). Fingerprint added on the launch day.
 - Step 16: Q4 2026 redemption requests of 7 funds (`resultats/etape16_previsions_4T2026.csv`). Fingerprint added by 15 November 2026.
 - The forecasts are scored in 2027, once the Q4 2026 filings are public; the files are published with the score.
+(https://github.com/Samhech/long-tail-portfolio-preregistration/edit/main/README.md)](https://github.com/Samhech/long-tail-portfolio-preregistration/edit/main/README.md)](https://github.com/Samhech/long-tail-portfolio-preregistration/edit/main/README.md)
