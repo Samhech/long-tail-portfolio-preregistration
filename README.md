@@ -65,6 +65,8 @@ Private repository snapshot: commit `fa42baa550ee5e69fae624fa2ae14cbdee2051d9`.
 
 - H17/H18: share of fresh money going to niche funds in Q4 2026 (`resultats/h1718_prediction_4T2026.csv`), computed by the single launch of 16 October 2026.  
   SHA-256: `55f5049d925e3a049f7b9145f238c7b2ba1e1d1e017d9408bd752eb413986c69`
+- H21-2026: flows into the niche ETFs of the sponsors that Fidelity starts charging on 16 November 2026 (cohort E2: 3 niche ETFs, all from Pacer), against 231 control niches (`resultats/h1921_h21_2026_prediction.csv`), frozen by the single launch of 18 October 2026 before any month of its window was read. Expected power is 0.016 (far below 0.80), so it is published as a reading, not a counted test.  
+  SHA-256: `3a46a8d54eb71b78a289d6d345c5511dbd7a69f9c7bfe69d4b0c692bd96ae03f`
 - Step 16: Q4 2026 redemption requests of 7 funds (`resultats/etape16_previsions_4T2026.csv`). Fingerprint added by 15 November 2026.
 - The forecasts are scored in 2027, once the Q4 2026 filings are public; the files are published with the score.
 
