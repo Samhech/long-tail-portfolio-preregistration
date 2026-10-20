@@ -101,3 +101,16 @@ Private repository snapshot: commit `fa42baa550ee5e69fae624fa2ae14cbdee2051d9`.
 | `resultats/h1921_empreintes_4bis.csv` | List of the fingerprints above | `8cbe8e7a61ce7bfdb44e5411e1940cbc77e16be21ac78ae28e45e85b320befca` |
 
 Two rules were changed on 17 October 2026, before the launch and without seeing any value: the threshold of H20 version (a) was lowered from 100 to 40 niche series after the structures counted 48 (in favour of the thesis; written on every H20 verdict), and a single hand reading of the BlackRock table is allowed if the script cannot read it. Both are recorded in the trial journal.
+
+## H22 (long tail on an easy-access app, pre-registered 20 October 2026)
+
+Question: on Robinhood in summer 2019, does a niche ETF have at least twice the clients of an ETF of the same size from the same issuer? The data, rules and code are fixed before any client count is read; the code and the frozen data will be fingerprinted here before the single launch.
+
+| File | Content | SHA-256 |
+|---|---|---|
+| `rapport/preenregistrement_h22.md` | Pre-registration of H22 (validated 20 Oct 2026) | `c053ec259d88bda6e404eb7cdbc0a248eef951c85ce347d6a05a8ec79d273873` |
+| `data/etape22_releves/ligne0/decisions_utilisateur.md` | Owner's dated answers to the pre-registration questions | `bce1656cc26af978eaee9cbf5479bda751f693180838afd90ee733463c53f3f1` |
+| `rapport/protocole_validation.md` | Full protocol, with H22 inscribed | `a7fe81a7a9060f72ad59a850eeedcb730b26d623144620711191fdef1d6cd590` |
+| `data/h22_dates.csv` | Event dates checked on primary sources | `3b88e53b8f69f867f3137a3dde6d5c351442bbbe7bfce1bd573bdf03b2a2bd8b` |
+| `data/brut/h22/MANIFESTE_robintrack.csv` | Fingerprints of the 2,216 Robintrack ETF files used (public archive) | `7b129c433ebadae9fb93571dc248dcdeb340d19cf7733ed9631f8ddacef188e2` |
+| `robintrack-popularity-history.tar.gz` | The public Robintrack archive as downloaded on 18 Oct 2026 (528,844,491 bytes) | `be9ba55ed99a11feb6dbb759ca51d97ad56e9bb0d637ca260c6c75d61c8afac6` |
