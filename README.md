@@ -142,6 +142,22 @@ Decided between 21 and 23 October 2026, before the launch and without reading an
 - A retained verdict, fixed before the launch, judges the false alarms at the Monte-Carlo margin of error (exact 90% interval [6.36%; 9.23%], which contains the 7.5% cap) and applies every other rule unchanged. The text forbids using a margin in favour of the thesis, so the retained verdict is published beside the official one and never replaces it.
 - Power of the two-p rule if niches truly have twice the clients: 0.846. Chance of a full "passes" in that case (all versions held): 0 under the official rule, 0.346 under the retained rule; with no effect: 0 out of 1,000 under both.
 
+### H22 conditional reading (declared 23 October 2026, before the launch)
+
+A separate reading, computed by its own script after the H22 result line, without changing the official or retained verdicts of H22 and without counting as a trial. Judged condition: niches whose price per share in Q3 2019 is in the two cheapest fifths of the other ETFs (45 niches on 20 themes); it is supported if those niches have at least 3 times the clients of ETFs of the same size, price and issuer, with both p-values below 0.05. Two descriptions without verdict: specialist issuers and recent ETFs.
+
+| File | Content | SHA-256 |
+|---|---|---|
+| `R/longue_traine_h22c.R` | Conditional reading | `3b2617ebd09ea27f3bad06b04afe6784a9c687325cfa74a2ef502be508fd064f` |
+| `scripts/22c_conditions.R` | Its dry run and reading | `165a13adcf1ff446ae4ef76afc2fb77ba3194e8e3887376d4d7c43f8b42c8265` |
+| `tests/test_h22c.R` | Unit tests (21 blocks) | `5f6abb9a76c53bd93db9d2a20c73b2ef3e0acc06261ee4fd3719209cdb860111` |
+| `rapport/specification_h22c.md` | Specification | `9bb29d1c7264ba1e87b3184043174293b792a4efb9925956c32805fa152cd0e7` |
+| `resultats/h22_conditions_repetition.csv` | Its dry run on fictitious panels | `89ed64da1a86e7deca73cf186915d8464aaf8398e5effd41e0e9430e917c8922` |
+
+- Dry run: power of the two-p rule 0.91 (455 of 500) at three times the clients; false alarms at most 4.4% in the three null families; testable.
+- The threshold of three was chosen by the owner on 23 October 2026, knowing the power (0.616 at twice, 0.91 at three times), after the blindness incident below; the reading carries this mention.
+- Blindness incident, 23 October 2026, after the freeze and the dry run: a web-research agent displayed the Q3 2019 Robinhood holder counts of 13 ETFs, 9 of them in the H22 sample (5 niches). All H22 rules, code and data were already frozen; no value was used in any computation. The trial journal records it; the H22 result will carry it.
+
 ## Official results (as of 23 October 2026)
 
 Each official verdict is the one written in the trial journal by the single launch. Verdicts retained after a launch are shown apart, with their date; they never replace the official verdict.
