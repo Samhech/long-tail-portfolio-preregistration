@@ -104,7 +104,7 @@ Two rules were changed on 17 October 2026, before the launch and without seeing 
 
 ## H22 (long tail on an easy-access app, pre-registered 20 October 2026)
 
-Question: on Robinhood in summer 2019, does a niche ETF have at least twice the clients of an ETF of the same size from the same issuer? The data, rules and code are fixed before any client count is read; the code and the frozen data will be fingerprinted here before the single launch.
+Question: on Robinhood in summer 2019, does a niche ETF have at least twice the clients of an ETF of the same size from the same issuer? The data, rules and code are fixed before any client count is read; the frozen data and the code are fingerprinted below, before the single launch.
 
 | File | Content | SHA-256 |
 |---|---|---|
@@ -115,7 +115,34 @@ Question: on Robinhood in summer 2019, does a niche ETF have at least twice the 
 | `data/brut/h22/MANIFESTE_robintrack.csv` | Fingerprints of the 2,216 Robintrack ETF files used (public archive) | `7b129c433ebadae9fb93571dc248dcdeb340d19cf7733ed9631f8ddacef188e2` |
 | `robintrack-popularity-history.tar.gz` | The public Robintrack archive as downloaded on 18 Oct 2026 (528,844,491 bytes) | `be9ba55ed99a11feb6dbb759ca51d97ad56e9bb0d637ca260c6c75d61c8afac6` |
 
-## Official results (as of 21 October 2026)
+### H22 freeze (23 October 2026, before any client count is read)
+
+| File | Content | SHA-256 |
+|---|---|---|
+| `data/h22_gel_manifeste.csv` | Freeze manifest of the H22 data (81 files: sample, cohort, surveys, Bloomberg export workbooks, copies of primary sources) | `0fda9074783a1298fa9a3437fe7c2afdd7df42ee5789e9697585ee92ad8d7939` |
+| `resultats/h22_empreintes_gel.csv` | Fingerprint of each frozen file (no values) | `2d4f3f3f65e95b8e2d96b2bf3debcb5aab46d1c8c609bb8835a5c521de4830c5` |
+| `data/brut/h22/MANIFESTE_robintrack.csv` | Robintrack files, each checked against this manifest at the freeze (2,216 files) | `7b129c433ebadae9fb93571dc248dcdeb340d19cf7733ed9631f8ddacef188e2` |
+
+### H22 code and structures (deposited after the dry run, before the single launch)
+
+| File | Content | SHA-256 |
+|---|---|---|
+| `resultats/h22_structures.csv` | Which ETFs enter the test (counts only, no values) | `7fd082dd2bae680b69512da8401458a6c346c215aa1520b1cd11e7e7362442d5` |
+| `R/longue_traine_h22.R` | H22 test | `05c522ec182764774b5358320350df561e1b9c777a3a32d5ca50c422cd789f83` |
+| `scripts/22_preparation.R` | Surveys, freeze, structures | `7dccac657973f9ebc0624a06ae5747043820854c15647e49eebc7351bd1d25c0` |
+| `scripts/22_blanc.R` | Dry run on fictitious panels | `aaf7df5ed62acaea42ae5b2b4c7f5cdb0aa97c27b2aba88e27132080eff62615` |
+| `scripts/22_lancement.R` | Single launch | `536ad6b22a36b1f5947480a914a136ed8ed2a9ebf3f17ce05db80ba73037eb84` |
+| `tests/test_h22.R` | Unit tests (44 blocks) | `939c9633f63c55465c465a85a4c4d33c89f1e0ca577ebd6975ebb84ced2e3a25` |
+| `rapport/specification_h22.md` | Code specification (version 1.2) | `c6cd660605edb2e5fa067c5ca5e1fb05f6e7a66fab9c9ddb1034a9737e881383` |
+| `resultats/h22_empreintes_4bis.csv` | List of the code fingerprints, including the shared code (unchanged, same fingerprints as in the H19-H21 table above) | `2f8e07e54f1e7433bda709a11026fd4c5f8eb79c08399cad7344eb57b4f39ed6` |
+
+Decided between 21 and 23 October 2026, before the launch and without reading any client count, all recorded in the trial journal:
+- ETFs renamed since 2020 are matched to the Bloomberg export by their 2020 symbol, else by their 2026 ticker, always checked by CUSIP (a departure from the letter of the text, written on every result that uses it).
+- The dry run on fictitious panels finds 77 false alarms out of 1,000 in the least favourable null family, above the 75 allowed. Under the pre-registered rule, the official verdict of H22 will therefore be "inconclusive" (1 trial).
+- A retained verdict, fixed before the launch, judges the false alarms at the Monte-Carlo margin of error (exact 90% interval [6.36%; 9.23%], which contains the 7.5% cap) and applies every other rule unchanged. The text forbids using a margin in favour of the thesis, so the retained verdict is published beside the official one and never replaces it.
+- Power of the two-p rule if niches truly have twice the clients: 0.846. Chance of a full "passes" in that case (all versions held): 0 under the official rule, 0.346 under the retained rule; with no effect: 0 out of 1,000 under both.
+
+## Official results (as of 23 October 2026)
 
 Each official verdict is the one written in the trial journal by the single launch. Verdicts retained after a launch are shown apart, with their date; they never replace the official verdict.
 
@@ -129,7 +156,7 @@ Each official verdict is the one written in the trial journal by the single laun
 | H20 | 18 Oct 2026 | Partly passes | Passes |
 | H21 | 18 Oct 2026 | Not testable (power) | - |
 | H20-BlackRock | 18 Oct 2026 | Not testable | - |
-| H22 | Not yet launched | - | - |
+| H22 | Not yet launched (official dry run: inconclusive in advance; retained rule: testable) | - | - |
 
 Retained after the launch: for H19, the 5% threshold is judged reached within the margin of error (except version (c)); for H20, version (d) is judged on the measure without mixed series in both periods. Both decisions are dated in the trial journal.
 
