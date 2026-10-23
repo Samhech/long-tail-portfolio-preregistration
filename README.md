@@ -158,6 +158,16 @@ A separate reading, computed by its own script after the H22 result line, withou
 - The threshold of three was chosen by the owner on 23 October 2026, knowing the power (0.616 at twice, 0.91 at three times), after the blindness incident below; the reading carries this mention.
 - Blindness incident, 23 October 2026, after the freeze and the dry run: a web-research agent displayed the Q3 2019 Robinhood holder counts of 13 ETFs, 9 of them in the H22 sample (5 niches). All H22 rules, code and data were already frozen; no value was used in any computation. The trial journal records it; the H22 result will carry it.
 
+### H22 launch stopped by a code defect, and its single corrected relaunch (23 October 2026)
+
+The single launch wrote its launch line, then stopped while reading the Bloomberg workbooks: a block number read back as text made the workbook path empty. It wrote no result and no output, and displayed nothing but the error message; it is not counted as a trial. As the text allows (section 10, step 7), the protocol now has a section ¬´ Correction apr√®s le lancement de H22 ¬ª, and one relaunch with outputs suffixed `_corrige` carries H22's single trial. The fix is one line (block and rank read as integers); no rule, threshold, seed, sample, model or frozen file changes. Before the relaunch, the whole launch path and the conditional reading were rehearsed end to end on a copy of the project in which every outcome file had been replaced by invented data.
+
+| File | Content | SHA-256 |
+|---|---|---|
+| `R/longue_traine_h22.R` | H22 test, corrected (was `05c522ec‚Ä¶` above) | `69e965aaff38fbc1851d8a20009f8d91ddadbbb560600d6132465c0580981635` |
+| `tests/test_h22.R` | Unit tests, with test 45 for the defect (45 blocks) | `afd68e9daac68a2828db2dd1e738d1f3af6d2b2290b69e545cd7aea07923c715` |
+| `rapport/protocole_validation.md` | Full protocol, with the correction section appended (its first 842,034 bytes are the file fingerprinted above as `a7fe81a7‚Ä¶`) | `aa23856ad84a3459cc3b2ebe38628813764235f15088ee583e105ce4e574022f` |
+
 ## Official results (as of 23 October 2026)
 
 Each official verdict is the one written in the trial journal by the single launch. Verdicts retained after a launch are shown apart, with their date; they never replace the official verdict.
@@ -172,7 +182,7 @@ Each official verdict is the one written in the trial journal by the single laun
 | H20 | 18 Oct 2026 | Partly passes | Passes |
 | H21 | 18 Oct 2026 | Not testable (power) | - |
 | H20-BlackRock | 18 Oct 2026 | Not testable | - |
-| H22 | Not yet launched (official dry run: inconclusive in advance; retained rule: testable) | - | - |
+| H22 | Launch stopped by a code defect on 23 Oct 2026 (no result); single corrected relaunch pending (official dry run: inconclusive in advance; retained rule: testable) | - | - |
 
 Retained after the launch: for H19, the 5% threshold is judged reached within the margin of error (except version (c)); for H20, version (d) is judged on the measure without mixed series in both periods. Both decisions are dated in the trial journal.
 
